@@ -1,0 +1,19 @@
+{
+  "name": "reactlearning",
+  "version": "1.0.0",
+  "description": "react learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyxie/reactLearning.git"
+  },
+  "author": "xieyuanyuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yyxie/reactLearning/issues"
+  },
+  "homepage": "https://github.com/yyxie/reactLearning#readme"
+}
