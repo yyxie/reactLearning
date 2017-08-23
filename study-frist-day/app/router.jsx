@@ -15,7 +15,6 @@ import TestPanelModel from './views/panelModal/testPanelModel.jsx';
 import MyFormModel from './views/testForm/testFormValid.jsx';
 import MultiForm from './views/otherForm/form.jsx';
 import WrappedDynamicFieldSet from './views/testForm/test2.jsx';
-import FilterableProductTable from './views/searchTest/search.jsx';
 
 let routes = (
   <Router history={ hashHistory }>
@@ -32,7 +31,6 @@ let routes = (
       <Route name='form' path='/myFormModel' component={MyFormModel}/>
       <Route name="MultiForm" path="/MultiForm" component={MultiForm}/>
       <Route name="WrappedDynamicFieldSet" path="/WrappedDynamicFieldSet" component={WrappedDynamicFieldSet}/>
-      <Route name="FilterableProductTable" path="/FilterableProductTable" component={FilterableProductTable}/>
       <Route path='*' component={ NotFound }/>
     </Route>
   </Router>
