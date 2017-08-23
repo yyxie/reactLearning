@@ -1,0 +1,11 @@
+{
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      // 块级作用域，使用let const
+      "blockBindings": false
+    }
+  }
+}
