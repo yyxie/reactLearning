@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="UPMS">
+    <meta name="description" content="UPMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPMS</title>
+    <link rel="icon" type="image/png" href="" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="build/app.css">
+    <style media="screen">
+        .display-none {
+            display: none;
+        }
+
+        .display-block {
+            display: block;
+        }
+
+        .site-loading {
+            width: 100vw;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            -webkit-transition: opacity .45s;
+            transition: opacity .45s;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .site-loading img {
+            display: block;
+            width: 64px;
+            margin: 0 auto 10px;
+        }
+
+        #app:empty + .site-loading {
+            opacity: 1;
+        }
+
+    </style>
+    <script type="text/javascript">
+        var process = {
+            env: {
+                NODE_ENV: "dev"
+            }
+        };
+
+        var MathQuill = null;
+    </script>
+</head>
+<body class="fill-body">
+<div id="legacyBrowserWarning" class="display-none">
+    <div class='legacy-browser-warning-container'>
+    </div>
+    <div class='legacy-browser-warning'>
+    </div>
+</div>
+<div id="app"></div>
+<div class="site-loading" id="site-loading">
+    <img src='static/img/pie.gif'/>
+    <div id="loading-text">Loading</div>
+</div>
+<script type="text/javascript" src="static/js/js.cookie.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script src="build/vendors.js"></script>
+<script src="build/app.bundle.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var scrollBarWidth = common.getScrollbarWidth();
+        $("<style type='text/css'>.ReactModal__Body--open.ReactModal__Body--lock{overflow-y: hidden !important;} .ReactModal__Body--open.ReactModal__Body--lock #app{margin-right:" + scrollBarWidth + "px;}</style>").appendTo("head");
+        common.init();
+    }
+</script>
+</body>
+</html>
