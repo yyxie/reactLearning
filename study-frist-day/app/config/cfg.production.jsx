@@ -6,7 +6,7 @@
 
 import AppConfig from './make.config.jsx';
 
-let baseUrl = "https://saas.lianyuplus.com";
+let baseUrl = "";
 let baseDir = baseUrl + "/upms";
 let UA = "Apartment";
 
